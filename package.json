@@ -11,7 +11,7 @@
     "url": "git+https://github.com/apiverve/worldholidays-API.git"
   },
   "keywords": [
-    "world holidays"," world holidays api"," world holidays tool"," world holidays software"," world holidays service"," world holidays library"," world holidays sdk"," world holidays code"," world holidays script"," world holidays program"," world holidays application"," world holidays app"," world holidays utility"," world holidays helper"," world holidays helper tool"," world holidays helper software"," world holidays helper service"," world holidays helper library"," world holidays helper sdk"," world holidays helper code"," world holidays helper script"," world holidays helper program"," world holidays helper application"," world holidays helper app"," world holidays helper utility"," world holidays helper"
+    "world holidays","world holidays api","world holidays tool","world holidays software","world holidays service"
   ],
   "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
   "license": "MIT",
@@ -27,6 +27,6 @@
   "dependencies": {
     "node-fetch": "3.3.2",
     "promise": "^7.1.1",
-    "request": "^2.69.0"
+    "axios": "^0.15.3"
   }
 }
