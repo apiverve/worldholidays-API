@@ -237,7 +237,8 @@ api.execute(query, function (error, data) {
         "type": "observance"
       }
     ]
-  }
+  },
+  "code": 200
 }
 ```
 
