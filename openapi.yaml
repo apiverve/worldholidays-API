@@ -1,0 +1,185 @@
+openapi: 3.0.4
+info:
+  title: World Holidays
+  description: World Holidays is a simple tool for getting the holidays of the world. It returns the holidays of the world for each day of the year.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/worldholidays:
+    get:
+      summary: Get Holidays by Country
+      description: World Holidays is a simple tool for getting the holidays of the world. It returns the holidays of the world for each day of the year.
+      operationId: worldholidays
+      parameters:
+      - name: country
+        in: query
+        schema:
+          type: string
+        required: true
+        description: The country code for which you want to get the holidays (e.g., US). Must be a two letter country code
+        example: US
+      - name: year
+        default: '2025'
+        in: query
+        schema:
+          type: integer
+        required: false
+        description: The year for which you want to get the holidays
+        example: '2025'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  country: US
+                  year: '2025'
+                  holidays:
+                  - date: 2025-01-01 00:00:00
+                    start: 2025-01-01T05:00:00.0000000Z
+                    end: 2025-01-02T05:00:00.0000000Z
+                    name: New Year's Day
+                    type: public
+                  - date: 2025-01-20 00:00:00
+                    start: 2025-01-20T05:00:00.0000000Z
+                    end: 2025-01-21T05:00:00.0000000Z
+                    name: Martin Luther King Jr. Day
+                    type: public
+                  - date: 2025-02-14 00:00:00
+                    start: 2025-02-14T05:00:00.0000000Z
+                    end: 2025-02-15T05:00:00.0000000Z
+                    name: Valentine's Day
+                    type: observance
+                  - date: 2025-02-17 00:00:00
+                    start: 2025-02-17T05:00:00.0000000Z
+                    end: 2025-02-18T05:00:00.0000000Z
+                    name: Washington's Birthday
+                    type: public
+                  - date: 2025-03-17 00:00:00
+                    start: 2025-03-17T04:00:00.0000000Z
+                    end: 2025-03-18T04:00:00.0000000Z
+                    name: St. Patrick's Day
+                    type: observance
+                  - date: 2025-04-15 00:00:00
+                    start: 2025-04-15T04:00:00.0000000Z
+                    end: 2025-04-16T04:00:00.0000000Z
+                    name: Tax Day
+                    type: observance
+                  - date: 2025-04-20 00:00:00
+                    start: 2025-04-20T04:00:00.0000000Z
+                    end: 2025-04-21T04:00:00.0000000Z
+                    name: Easter Sunday
+                    type: observance
+                  - date: 2025-04-23 00:00:00
+                    start: 2025-04-23T04:00:00.0000000Z
+                    end: 2025-04-24T04:00:00.0000000Z
+                    name: Administrative Professionals Day
+                    type: observance
+                  - date: 2025-05-11 00:00:00
+                    start: 2025-05-11T04:00:00.0000000Z
+                    end: 2025-05-12T04:00:00.0000000Z
+                    name: Mother's Day
+                    type: observance
+                  - date: 2025-05-26 00:00:00
+                    start: 2025-05-26T04:00:00.0000000Z
+                    end: 2025-05-27T04:00:00.0000000Z
+                    name: Memorial Day
+                    type: public
+                  - date: 2025-06-15 00:00:00
+                    start: 2025-06-15T04:00:00.0000000Z
+                    end: 2025-06-16T04:00:00.0000000Z
+                    name: Father's Day
+                    type: observance
+                  - date: 2025-06-19 00:00:00
+                    start: 2025-06-19T04:00:00.0000000Z
+                    end: 2025-06-20T04:00:00.0000000Z
+                    name: Juneteenth
+                    type: public
+                  - date: 2025-07-04 00:00:00
+                    start: 2025-07-04T04:00:00.0000000Z
+                    end: 2025-07-05T04:00:00.0000000Z
+                    name: Independence Day
+                    type: public
+                  - date: 2025-09-01 00:00:00
+                    start: 2025-09-01T04:00:00.0000000Z
+                    end: 2025-09-02T04:00:00.0000000Z
+                    name: Labor Day
+                    type: public
+                  - date: 2025-10-13 00:00:00
+                    start: 2025-10-13T04:00:00.0000000Z
+                    end: 2025-10-14T04:00:00.0000000Z
+                    name: Columbus Day
+                    type: public
+                  - date: 2025-10-31 18:00:00
+                    start: 2025-10-31T22:00:00.0000000Z
+                    end: 2025-11-01T04:00:00.0000000Z
+                    name: Halloween
+                    type: observance
+                  - date: 2025-11-11 00:00:00
+                    start: 2025-11-11T05:00:00.0000000Z
+                    end: 2025-11-12T05:00:00.0000000Z
+                    name: Veterans Day
+                    type: public
+                  - date: 2025-11-27 00:00:00
+                    start: 2025-11-27T05:00:00.0000000Z
+                    end: 2025-11-28T05:00:00.0000000Z
+                    name: Thanksgiving Day
+                    type: public
+                  - date: 2025-11-28 00:00:00
+                    start: 2025-11-28T05:00:00.0000000Z
+                    end: 2025-11-29T05:00:00.0000000Z
+                    name: Day after Thanksgiving Day
+                    type: observance
+                  - date: 2025-12-24 00:00:00
+                    start: 2025-12-24T05:00:00.0000000Z
+                    end: 2025-12-25T05:00:00.0000000Z
+                    name: Christmas Eve
+                    type: optional
+                  - date: 2025-12-25 00:00:00
+                    start: 2025-12-25T05:00:00.0000000Z
+                    end: 2025-12-26T05:00:00.0000000Z
+                    name: Christmas Day
+                    type: public
+                  - date: 2025-12-31 00:00:00
+                    start: 2025-12-31T05:00:00.0000000Z
+                    end: 2026-01-01T05:00:00.0000000Z
+                    name: New Year's Eve
+                    type: observance
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
