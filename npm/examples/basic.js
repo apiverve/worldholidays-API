@@ -16,7 +16,7 @@ const api = new worldholidaysAPI({
 // Example query
 var query = {
   country: "US",
-  year: 2025
+  year: 2026
 };
 
 // Make the API request using callback
