@@ -17,14 +17,11 @@ def call_worldholidays_api():
     Make a GET request to the World Holidays API
     """
     try:
-        # Query parameters
-        params &#x3D; {&#x27;country&#x27;: &#x27;US&#x27;, &#x27;year&#x27;: 2025}
-
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers, params=params)
+        response = requests.get(API_URL, headers=headers)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
