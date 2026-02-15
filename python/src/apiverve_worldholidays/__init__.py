@@ -1,1 +1,3 @@
-from .apiClient import WorldholidaysAPIClient
+from .apiClient import WorldholidaysAPIClient, WorldholidaysAPIClientError
+
+__all__ = ['WorldholidaysAPIClient', 'WorldholidaysAPIClientError']
