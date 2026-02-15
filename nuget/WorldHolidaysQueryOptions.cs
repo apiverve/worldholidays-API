@@ -11,15 +11,13 @@ namespace APIVerve.API.WorldHolidays
     public class WorldHolidaysQueryOptions
     {
         /// <summary>
-        /// The country code for which you want to get the holidays (e.g., US). Must be a two letter country code
-        /// Example: US
+        /// The 2-letter country code for which you want to get the holidays
         /// </summary>
         [JsonProperty("country")]
         public string Country { get; set; }
 
         /// <summary>
         /// The year for which you want to get the holidays
-        /// Example: 2025
         /// </summary>
         [JsonProperty("year")]
         public string Year { get; set; }
