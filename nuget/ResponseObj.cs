@@ -33,7 +33,6 @@ namespace APIVerve.API.WorldHolidays
         public string Country { get; set; }
 
         [JsonProperty("year")]
-        [JsonConverter(typeof(ParseStringConverter))]
         public long Year { get; set; }
 
         [JsonProperty("holidays")]
