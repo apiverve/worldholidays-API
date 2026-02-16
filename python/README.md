@@ -44,7 +44,10 @@ from apiverve_worldholidays.apiClient import WorldholidaysAPIClient
 # Initialize the client with your APIVerve API key
 api = WorldholidaysAPIClient("[YOUR_API_KEY]")
 
-query = { "country": "US", "year": 2026 }
+query = {
+    "country": "US",
+    "year": 2026
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "country": "US", "year": 2026 }
+query = {
+    "country": "US",
+    "year": 2026
+}
 ```
 
 ###### Simple Request
@@ -277,7 +283,10 @@ from apiverve_worldholidays.apiClient import WorldholidaysAPIClient, Worldholida
 
 api = WorldholidaysAPIClient("[YOUR_API_KEY]")
 
-query = { "country": "US", "year": 2026 }
+query = {
+    "country": "US",
+    "year": 2026
+}
 
 try:
     result = api.execute(query)
@@ -298,7 +307,10 @@ from apiverve_worldholidays.apiClient import WorldholidaysAPIClient, Worldholida
 
 api = WorldholidaysAPIClient("[YOUR_API_KEY]")
 
-query = { "country": "US", "year": 2026 }
+query = {
+    "country": "US",
+    "year": 2026
+}
 
 try:
     result = api.execute(query)
@@ -332,7 +344,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_worldholidays.apiClient import WorldholidaysAPIClient, WorldholidaysAPIClientError
 
-query = { "country": "US", "year": 2026 }
+query = {
+    "country": "US",
+    "year": 2026
+}
 
 # Using context manager ensures proper cleanup
 with WorldholidaysAPIClient("[YOUR_API_KEY]") as api:
@@ -358,7 +373,10 @@ from apiverve_worldholidays.apiClient import WorldholidaysAPIClient
 # Enable debug mode
 api = WorldholidaysAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "country": "US", "year": 2026 }
+query = {
+    "country": "US",
+    "year": 2026
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -373,8 +391,12 @@ from apiverve_worldholidays.apiClient import WorldholidaysAPIClient
 
 api = WorldholidaysAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "country": "US",
+    "year": 2026
+}
+
 try:
-    query = { "country": "US", "year": 2026 }
     result = api.execute(query)
     print(result)
 finally:
