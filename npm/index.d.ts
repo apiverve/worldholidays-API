@@ -4,26 +4,38 @@ declare module '@apiverve/worldholidays' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface worldholidaysResponse {
     status: string;
     error: string | null;
     data: WorldHolidaysData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface WorldHolidaysData {
-      country:  string;
-      year:     string;
+      country:  null | string;
+      year:     null | string;
       holidays: Holiday[];
   }
   
   interface Holiday {
-      date:  Date;
-      start: Date;
-      end:   Date;
-      name:  string;
-      type:  Type;
+      date:  Date | null;
+      start: Date | null;
+      end:   Date | null;
+      name:  null | string;
+      type:  Type | null;
   }
   
   enum Type {
