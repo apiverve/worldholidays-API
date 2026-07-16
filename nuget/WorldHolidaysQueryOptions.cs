@@ -20,6 +20,6 @@ namespace APIVerve.API.WorldHolidays
         /// The year for which you want to get the holidays
         /// </summary>
         [JsonProperty("year")]
-        public string Year { get; set; }
+        public int? Year { get; set; }
     }
 }
