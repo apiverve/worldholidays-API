@@ -25,6 +25,9 @@ namespace APIVerve.API.WorldHolidays
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -33,7 +36,7 @@ namespace APIVerve.API.WorldHolidays
         public string Country { get; set; }
 
         [JsonProperty("year")]
-        public long Year { get; set; }
+        public long? Year { get; set; }
 
         [JsonProperty("holidays")]
         public Holiday[] Holidays { get; set; }
@@ -42,19 +45,31 @@ namespace APIVerve.API.WorldHolidays
     public partial class Holiday
     {
         [JsonProperty("date")]
-        public DateTimeOffset Date { get; set; }
+        public DateTimeOffset? Date { get; set; }
 
         [JsonProperty("start")]
-        public DateTimeOffset Start { get; set; }
+        public DateTimeOffset? Start { get; set; }
 
         [JsonProperty("end")]
-        public DateTimeOffset End { get; set; }
+        public DateTimeOffset? End { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }
 
         [JsonProperty("type")]
-        public TypeEnum Type { get; set; }
+        public TypeEnum? Type { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 
     public enum TypeEnum { Observance, Optional, Public };
